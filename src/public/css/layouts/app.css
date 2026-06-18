@@ -1,0 +1,25 @@
+.header__common {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    padding: 0 30px;
+    border-bottom: 1px solid #ddd;
+}
+
+.header__title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #8B7969;
+}
+
+.header__logout {
+    margin-left: auto;
+    border: solid 1px #D9C6B5;
+    background: #F7F6F4;
+    color: #DFD8D2;
+    padding: 3px 20px;
+    font-size: 18px;
+    text-decoration: none;
+}
