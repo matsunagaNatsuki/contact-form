@@ -5,6 +5,7 @@
     height: 80px;
     padding: 0 30px;
     border-bottom: 1px solid #ddd;
+    background: white;
 }
 
 .header__title {
@@ -14,7 +15,11 @@
     color: #8B7969;
 }
 
-.header__logout {
+.header__auth {
+    text-align: right;
+}
+
+.header__redirect {
     margin-left: auto;
     border: solid 1px #D9C6B5;
     background: #F7F6F4;

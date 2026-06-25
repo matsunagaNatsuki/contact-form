@@ -16,7 +16,13 @@
         <div class="header__title">
             <h1>FashionablyLate</h1>
         </div>
-        <a class="header__logout" href="/login">login</a>
+
+        @if(request()->routeIs('register'))
+        <a class="header__redirect" href="/login">login</a>
+        @elseif(request()->routeIs('login'))
+        <a class="header__redirect" href="/register">login</a>
+        @endif
+        
     </header>
 
     <!-- メインのcontentを継承 -->
