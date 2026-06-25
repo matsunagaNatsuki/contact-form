@@ -20,9 +20,8 @@
         @if(request()->routeIs('register'))
         <a class="header__redirect" href="/login">login</a>
         @elseif(request()->routeIs('login'))
-        <a class="header__redirect" href="/register">login</a>
+        <a class="header__redirect" href="/register">register</a>
         @endif
-        
     </header>
 
     <!-- メインのcontentを継承 -->

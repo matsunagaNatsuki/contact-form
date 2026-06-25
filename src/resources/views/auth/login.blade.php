@@ -4,9 +4,7 @@
 <link rel="stylesheet" href="{{ asset('css/login.css') }}">
 @endsection
 
-@section('title',)
-
-@endsection
+@section('title','ログイン画面')
 
 @section('content')
 <div class="login-form__content">
