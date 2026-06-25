@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
 use Laravel\Fortify\Contracts\CreatesNewUsers;
 use Illuminate\Validation\Rules\Password;
+use App\Http\Requests\RegisterRequest;
 
 class CreateNewUser implements CreatesNewUsers
 {
@@ -20,21 +21,29 @@ class CreateNewUser implements CreatesNewUsers
      */
     public function create(array $input): User
     {
-        Validator::make($input, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => [
-                'required',
-                'string',
-                'email',
-                'max:255',
-                Rule::unique(User::class),
-            ],
-            'password' => [
-                'required',
-                'string',
-                Password::defaults(),
-            ],
-        ])->validate();
+        $request = new RegisterRequest();
+
+        // Validator::make($input, [
+        //     'name' => ['required', 'string', 'max:255'],
+        //     'email' => [
+        //         'required',
+        //         'string',
+        //         'email',
+        //         'max:255',
+        //         Rule::unique(User::class),
+        //     ],
+        //     'password' => [
+        //         'required',
+        //         'string',
+        //         Password::defaults(),
+        //     ],
+        // ])->validate();
+
+        Validator::make(
+            $input,
+            $request->rules(),
+            $request->messages(),
+        )->validate();
 
         return User::create([
             'name' => $input['name'],

@@ -12,6 +12,12 @@ use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
 use Laravel\Fortify\Fortify;
+use App\Http\Requests\LoginRequest;
+use Illuminate\Support\Facades\Validator;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
+
+
 
 class FortifyServiceProvider extends ServiceProvider
 {
@@ -43,5 +49,35 @@ class FortifyServiceProvider extends ServiceProvider
 
                 return Limit::perMinute(10)->by($email . $request->ip());
             });
+
+        // Fortify::authenticateUsing(function (Request $request) {
+
+        //     $formRequest = new LoginRequest();
+
+        //     // Validator::make(
+        //     //     $request->all(),
+        //     //     $formRequest->rules(),
+        //     //     $formRequest->messages(),
+        //     // )->validate();
+
+        //         Validator::make(
+        //             $request->all(),
+        //             $formRequest->rules(),
+        //             $formRequest->messages(),
+        //             method_exists($formRequest, 'attributes')
+        //                 ? $formRequest->attributes()
+        //                 : []
+        //         )->validate();
+
+        //     // $formRequest->validator($request->all())->validate();
+
+        //     $user = User::where('email', $request->email)->first();
+
+        //     if ($user && Hash::check($request->password, $user->password)) {
+        //         return $user;
+        //     }
+
+        //     return null;
+        // });
     }
 }

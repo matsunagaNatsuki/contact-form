@@ -19,7 +19,7 @@ body {
 
 .form {
     width: 500px;
-    height: 300px;
+    height: 344px;
     margin: 0px auto;
     border:solid 1px silver;
     background: white;
@@ -43,6 +43,11 @@ body {
     background-color: #F5F5F5;
     border: none;
     border-radius: 5px;
+}
+
+.form__error {
+    color: red;
+    font-size: 15px;
 }
 
 .form__button {
