@@ -46,6 +46,11 @@ class FortifyServiceProvider extends ServiceProvider
                     return view('auth.login');
                 });
 
+            // ログアウト機能
+            // Fortify::logoutResponse(function () {
+            //     return redirect('/login');
+            // });
+
             // login処理の実行回数を1分あたり10回までに制限
             Ratelimiter::for('login', function (Request $request) {
                 $email = (string) $request->email;

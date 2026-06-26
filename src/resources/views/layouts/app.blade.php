@@ -17,10 +17,17 @@
             <h1>FashionablyLate</h1>
         </div>
 
-        @if(request()->routeIs('register'))
-        <a class="header__redirect" href="/login">login</a>
-        @elseif(request()->routeIs('login'))
-        <a class="header__redirect" href="/register">register</a>
+        @if (auth()->check())
+        <form method="POST" action="/logout">
+            @csrf
+            <button>ログアウト</button>
+        </form>
+        @else
+            @if (request()->routeIs('register'))
+            <a class="header__redirect" href="/login">login</a>
+            @else
+            <a class="header__redirect" href="/register">register</a>
+            @endif
         @endif
     </header>
 
