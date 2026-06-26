@@ -21,7 +21,14 @@ class CreateNewUser implements CreatesNewUsers
      */
     public function create(array $input): User
     {
+        // FormRequestのバリデーション
         $request = new RegisterRequest();
+
+        Validator::make(
+            $input,
+            $request->rules(),
+            $request->messages(),
+        )->validate();
 
         // Validator::make($input, [
         //     'name' => ['required', 'string', 'max:255'],
@@ -39,12 +46,7 @@ class CreateNewUser implements CreatesNewUsers
         //     ],
         // ])->validate();
 
-        Validator::make(
-            $input,
-            $request->rules(),
-            $request->messages(),
-        )->validate();
-
+        // ユーザーの登録情報を登録
         return User::create([
             'name' => $input['name'],
             'email' => $input['email'],
