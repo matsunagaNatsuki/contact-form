@@ -18,16 +18,16 @@
         </div>
 
         @if (auth()->check())
-        <form method="POST" action="/logout">
+        <form class="form" method="POST" action="/logout">
             @csrf
-            <button>ログアウト</button>
+            <button class="header__logout">logout</button>
         </form>
         @else
-            @if (request()->routeIs('register'))
-            <a class="header__redirect" href="/login">login</a>
-            @else
-            <a class="header__redirect" href="/register">register</a>
-            @endif
+        @if (request()->routeIs('register'))
+        <a class="header__redirect" href="/login">login</a>
+        @else
+        <a class="header__redirect" href="/register">register</a>
+        @endif
         @endif
     </header>
 

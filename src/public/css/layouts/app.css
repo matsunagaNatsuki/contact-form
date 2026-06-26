@@ -15,8 +15,24 @@
     color: #8B7969;
 }
 
-.header__auth {
-    text-align: right;
+.form {
+    margin-left: auto;
+}
+
+.header__logout {
+    margin-left: auto;
+    border: solid 1px #D9C6B5;
+    background: #F7F6F4;
+    color: #DFD8D2;
+    padding: 3px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.header__logout button {
+    appearance: none;
+    border: none;
 }
 
 .header__redirect {
