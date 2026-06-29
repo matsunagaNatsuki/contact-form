@@ -11,29 +11,30 @@
 </head>
 
 <body>
-    <!-- ヘッダーを全画面layouts継承 -->
+    {{--ヘッダーをlayouts継承 --}}
     <header class="header__common">
         <div class="header__title">
             <h1>FashionablyLate</h1>
         </div>
 
-
-        <!-- 画面ごとの条件分岐ができていないためTODO -->
+        {{-- ログイン中はログアウトボタンを表示 --}}
         @if (auth()->check())
         <form class="form" method="POST" action="/logout">
             @csrf
             <button class="header__logout">logout</button>
         </form>
-        @else
-        @if (request()->routeIs('register'))
+
+        {{-- 登録画面の時はlogin画面にリダイレクト --}}
+        @elseif (request()->routeIs('register'))
         <a class="header__redirect" href="/login">login</a>
-        @else
+
+        {{-- ログイン画面の時はregister画面にリダイレクト --}}
+        @elseif (request()->routeIs('login'))
         <a class="header__redirect" href="/register">register</a>
-        @endif
         @endif
     </header>
 
-    <!-- メインのcontentを継承 -->
+    {{--メインのcontentを継承 --}}
     <main>
         @yield('content')
     </main>
