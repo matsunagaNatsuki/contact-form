@@ -48,6 +48,24 @@
     margin-left: 200px;
 }
 
+.form__input--tel {
+    margin-left: 110px
+}
+
+.form__input--tel input {
+    padding: 10px;
+    width: 200px;
+    height: 10px;
+    background: #F5F5F5;
+    border: none;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+}
+
+.form__input--tel span {
+    color: #8B7969;
+}
+
 .form__input--text input {
     padding: 10px;
     width: 300px;
@@ -58,6 +76,26 @@
     margin-left: 110px
 }
 
+.form__option--select {
+    width: 300px;
+    height: 10px;
+    margin-left: 110px;
+}
+
+.form__option--select select {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ddd;
+    background: #F5F5F5;
+    border-radius: 3px;
+    margin-left: 110px;
+    /* color: silver; */
+}
+
+.form__group textarea {
+    margin-top: 10px;
+}
+
 .form__input--textarea textarea {
     padding: 10px;
     width: 300px;
@@ -65,9 +103,7 @@
     background: #F5F5F5;
     border-radius: 3px;
     margin-left: 200px;
-}
-
-.form__input--textarea textarea {
+    margin-top: 10px;
     height: 180px;
     width: 400px;
 }
