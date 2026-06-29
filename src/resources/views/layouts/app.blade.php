@@ -17,6 +17,8 @@
             <h1>FashionablyLate</h1>
         </div>
 
+
+        <!-- 画面ごとの条件分岐ができていないためTODO -->
         @if (auth()->check())
         <form class="form" method="POST" action="/logout">
             @csrf
