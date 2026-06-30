@@ -38,6 +38,13 @@
     color: red;
 }
 
+.form__name--column {
+    width: 50%;
+}
+.form__name--column:nth-child(odd) {
+    margin-right: 20px;
+}
+
 .form__input--radio {
     display: flex;
     gap: 40px;
@@ -75,7 +82,8 @@
 .form__error {
     height: 20px;
     color: #ff0000;
-    text-align: left;
+    /* text-align: left; */
+    margin: 0px 0px 10px 112px;
 }
 
 .form__input--tel input {
