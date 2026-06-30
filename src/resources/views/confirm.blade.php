@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="{{ asset('css/confirm.css') }}">
 @endsection
 
-@section('title','お問い合わせフォーム')
+@section('title','お問い合わせ確認フォーム')
 
 @section('content')
 <div class="contact-form__content">
