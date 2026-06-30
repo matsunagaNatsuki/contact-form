@@ -1,3 +1,4 @@
+/* index.blade.php */
 .contact-form__heading h2{
     color: #8B7969;
     font-size: 28px;
@@ -149,4 +150,56 @@
     background: #7F776C;
     border: none;
     padding: 10px 30px;
+}
+
+/* .confirm__table{
+
+    width:100%;
+} */
+
+/* confirm.blade.php */
+.form {
+    /* width: 100%; */
+    margin: 0 auto;
+}
+
+.form__group--confirm:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+}
+
+.confirm__table {
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    width: 50%;
+
+}
+.confirm__table th{
+    width:270px;
+    /* border-right: 1px solid #ddd; */
+    font-weight: 200;
+}
+.form__confirm {
+    border-bottom: 1px solid #ddd;
+}
+
+.form__group-confirm {
+    padding-left: 35px;
+    border-bottom: 1px solid #ddd;
+}
+
+.form__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.form__label--confirm {
+    background: #8B7969;
+    color: white;
+    text-align: center;
+}
+
+.form__button-edit {
+    color: #8B7969
 }
