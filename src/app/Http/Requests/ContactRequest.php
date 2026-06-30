@@ -32,7 +32,7 @@ class ContactRequest extends FormRequest
             'tel2' => ['required'],
             'tel3' => ['required'],
             'address' => ['required'],
-            'kinds' => ['required'],
+            'category_id' => ['required'],
             'content' => ['required', 'max:120'],
         ];
     }
@@ -50,7 +50,7 @@ class ContactRequest extends FormRequest
             'tel2.required' => '電話番号を入力してください',
             'tel3.required' => '電話番号を入力してください',
             'address.required' => '住所を入力してください',
-            'kinds.required' => 'お問い合わせの種類を選択してください',
+            'category_id.required' => 'お問い合わせの種類を選択してください',
             'content.required' => 'お問い合わせ内容を入力してください',
             'content.max' => 'お問い合わせ内容は120文字以内で入力してください',
         ];

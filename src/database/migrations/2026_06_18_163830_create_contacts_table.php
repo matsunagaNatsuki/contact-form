@@ -26,7 +26,7 @@ class CreateContactsTable extends Migration
             $table->string('tel', 255);
             $table->string('address', 255);
             $table->string('building', 255)->nullable();
-            $table->text('detail');
+            $table->text('content');
             $table->timestamps();
         });
     }

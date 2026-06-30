@@ -28,7 +28,7 @@ class ContactFactory extends Factory
             'tel' => $this->faker->numerify('090########'),
             'address' => $this->faker->address(),
             'building' => $this->faker->optional()->secondaryAddress(),
-            'detail' => $this->faker->realText(100),
+            'content' => $this->faker->realText(100),
         ];
     }
 }

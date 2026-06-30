@@ -6,8 +6,10 @@ use App\Http\Controllers\ContactController;
 // お問い合わせフォーム入力画面
 Route::get('/', [ContactController::class, 'index']);
 Route::post('/contacts', [ContactController::class, 'contacts']);
+
 // お問い合わせフォーム確認画面
 Route::get('/confirm', [ContactController::class, 'confirm']);
+Route::post('/store', [ContactController::class, 'store']);
 
 // サンクスページ
 Route::get('/thanks', [ContactController::class, 'thanks']);
